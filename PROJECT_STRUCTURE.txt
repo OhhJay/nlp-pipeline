@@ -1,0 +1,173 @@
+nlp-project/
+│
+├── 📄 README.md                    # Main documentation
+├── 📄 QUICKSTART.md                # 5-minute getting started guide  
+├── 📄 ARCHITECTURE.md              # System design & architecture
+├── 📄 EXAMPLES.md                  # Comprehensive usage examples
+├── 📄 PROJECT_SUMMARY.md           # Project overview
+├── 📄 PROJECT_STRUCTURE.txt        # This file
+│
+├── 📋 requirements.txt             # Python dependencies
+├── 🐍 run_pipeline.py              # Command-line interface (executable)
+├── 📝 .env.example                 # Environment variables template
+├── 🚫 .gitignore                   # Git ignore rules
+│
+├── 🐳 Dockerfile                   # Docker container definition
+├── 🐳 docker-compose.yml           # Multi-container orchestration
+├── 🗄️ init_db.sql                  # Database initialization script
+│
+├── 📁 src/                         # Source code
+│   ├── __init__.py
+│   ├── sentiment_analyzer.py      # Core NLP sentiment analysis
+│   ├── data_handler.py            # Data loading & saving
+│   └── pipeline.py                # Pipeline orchestration
+│
+├── 📁 tests/                       # Test suite
+│   ├── __init__.py
+│   ├── test_sentiment_analyzer.py # Sentiment analysis tests
+│   ├── test_data_handler.py       # Data handling tests
+│   └── test_pipeline.py           # Pipeline integration tests
+│
+├── 📁 data/                        # Sample data
+│   ├── sample_reviews.csv         # Example CSV data
+│   └── sample_feedback.json       # Example JSON data
+│
+├── 📁 notebooks/                   # Interactive notebooks
+│   └── sentiment_analysis.ipynb   # Google Colab notebook
+│
+└── 📁 .circleci/                   # CI/CD configuration
+    └── config.yml                  # CircleCI pipeline definition
+
+---
+
+FILE DESCRIPTIONS:
+
+📂 Core Application Files:
+  • sentiment_analyzer.py    → NLP engine for sentiment analysis
+  • data_handler.py          → Load/save from CSV, JSON, databases  
+  • pipeline.py              → Orchestrates the complete workflow
+  • run_pipeline.py          → CLI interface for easy execution
+
+📂 Configuration Files:
+  • requirements.txt         → All Python dependencies
+  • .env.example            → Template for environment variables
+  • docker-compose.yml      → Multi-container setup (app + database)
+  • init_db.sql             → PostgreSQL schema & sample data
+
+📂 Testing Files:
+  • test_*.py               → Comprehensive test coverage
+  • Uses pytest with coverage reporting
+
+📂 Documentation Files:
+  • README.md               → Complete reference guide
+  • QUICKSTART.md           → Get started in 5 minutes
+  • ARCHITECTURE.md         → System design diagrams
+  • EXAMPLES.md             → Real-world usage examples
+  • PROJECT_SUMMARY.md      → High-level overview
+
+📂 Data Files:
+  • sample_reviews.csv      → 10 sample customer reviews
+  • sample_feedback.json    → 5 sample feedback entries
+
+📂 Deployment Files:
+  • Dockerfile              → Container image definition
+  • .circleci/config.yml    → Automated CI/CD pipeline
+
+---
+
+TOTAL PROJECT STATS:
+
+Source Files:       4 Python modules
+Test Files:         3 test suites  
+Documentation:      5 comprehensive guides
+Sample Data:        2 example datasets
+Configuration:      6 config files
+Total Lines:        ~3000+ lines of code & docs
+
+---
+
+KEY FEATURES BY FILE:
+
+sentiment_analyzer.py (Core NLP):
+  ✓ Text preprocessing & cleaning
+  ✓ Polarity scoring (-1 to +1)
+  ✓ Subjectivity scoring (0 to 1)
+  ✓ Label classification (positive/negative/neutral)
+  ✓ Batch processing support
+
+data_handler.py (I/O Operations):
+  ✓ Load from CSV, JSON, databases
+  ✓ Save to CSV, JSON, databases
+  ✓ Summary statistics generation
+  ✓ Error handling & validation
+
+pipeline.py (Orchestration):
+  ✓ End-to-end workflow management
+  ✓ Progress logging
+  ✓ Timestamp tracking
+  ✓ Multiple pipeline types (CSV, JSON, DB, custom)
+
+run_pipeline.py (CLI):
+  ✓ Command-line argument parsing
+  ✓ User-friendly error messages
+  ✓ Multiple source/output type support
+  ✓ Configuration via flags
+
+Docker Setup:
+  ✓ Containerized application
+  ✓ PostgreSQL database included
+  ✓ Volume mounting for data
+  ✓ Network isolation
+  ✓ Easy deployment
+
+CI/CD Pipeline:
+  ✓ Automated testing on commits
+  ✓ Docker image building
+  ✓ Test coverage reporting
+  ✓ Artifact storage
+
+---
+
+USAGE PATTERNS:
+
+1. Local Development:
+   python run_pipeline.py --source-type csv ...
+
+2. Docker:
+   docker-compose up -d
+   docker-compose exec nlp-app python run_pipeline.py ...
+
+3. Python API:
+   from src.pipeline import SentimentPipeline
+   pipeline = SentimentPipeline()
+   results = pipeline.run_csv_pipeline(...)
+
+4. Testing:
+   pytest tests/ -v --cov=src
+
+5. CI/CD:
+   Push to GitHub → CircleCI runs automatically
+
+---
+
+PROJECT HIGHLIGHTS:
+
+✅ Production-ready code quality
+✅ Comprehensive error handling  
+✅ Full test coverage
+✅ Docker containerization
+✅ CI/CD integration
+✅ Multiple data source support
+✅ Flexible output formats
+✅ Interactive notebooks
+✅ Extensive documentation
+✅ Real-world examples
+
+Perfect for:
+• Learning NLP & data pipelines
+• Building production systems
+• Portfolio projects
+• Educational demonstrations
+• Real business applications
+
+---
