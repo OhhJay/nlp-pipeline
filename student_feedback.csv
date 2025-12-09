@@ -1,0 +1,51 @@
+student_id,course_name,feedback,rating,semester
+S001,Introduction to Python,"This course was absolutely fantastic! The instructor explained concepts clearly and the projects were engaging.",5,Fall 2024
+S002,Introduction to Python,"I'm struggling with the pace. Everything moves too fast and I can't keep up with assignments.",2,Fall 2024
+S003,Data Science Fundamentals,"Great course! Loved the hands-on projects and real-world datasets. Very practical.",5,Fall 2024
+S004,Data Science Fundamentals,"The assignments are too difficult. Not enough guidance on complex topics.",2,Fall 2024
+S005,Web Development,"Amazing instructor! Very supportive and always available for questions. Best class I've taken.",5,Fall 2024
+S006,Introduction to Python,"Good content but the homework is overwhelming. Need more time to complete assignments.",3,Fall 2024
+S007,Web Development,"The course structure is confusing. Jump around topics without clear progression.",2,Fall 2024
+S008,Data Science Fundamentals,"Excellent course! Perfect balance of theory and practice. Learned so much.",5,Fall 2024
+S009,Introduction to Python,"I appreciate the detailed explanations but wish there were more coding examples.",4,Fall 2024
+S010,Web Development,"Terrible experience. Videos are outdated and assignments don't match lecture content.",1,Fall 2024
+S011,Data Science Fundamentals,"Pretty good overall. Could use more real-world case studies though.",4,Fall 2024
+S012,Introduction to Python,"Love this course! The pace is perfect and the instructor is very knowledgeable.",5,Fall 2024
+S013,Web Development,"It's okay. Nothing special but I'm learning the basics.",3,Fall 2024
+S014,Data Science Fundamentals,"Too much theory, not enough practical application. Disappointed.",2,Fall 2024
+S015,Introduction to Python,"Outstanding! Clear explanations, helpful assignments, and great support.",5,Fall 2024
+S016,Web Development,"Very frustrating. Technical issues every week and poor communication from instructor.",1,Fall 2024
+S017,Data Science Fundamentals,"Decent course. Some topics are rushed but overall content is solid.",3,Fall 2024
+S018,Introduction to Python,"The projects are interesting but instructions are often unclear.",3,Fall 2024
+S019,Web Development,"Excellent course material and wonderful teaching style. Highly recommend!",5,Fall 2024
+S020,Data Science Fundamentals,"This course changed my perspective on data! Absolutely brilliant instructor.",5,Fall 2024
+S021,Introduction to Python,"Way too basic. Expected more advanced topics. Waste of time.",2,Fall 2024
+S022,Web Development,"Good foundation but needs more modern frameworks and tools.",3,Fall 2024
+S023,Data Science Fundamentals,"The best course I've ever taken online. Clear, concise, and comprehensive.",5,Fall 2024
+S024,Introduction to Python,"Instructor is amazing but course platform is buggy and frustrating.",4,Fall 2024
+S025,Web Development,"Boring lectures and outdated content. Needs a complete refresh.",2,Fall 2024
+S026,Data Science Fundamentals,"Love the interactive exercises! Makes learning fun and engaging.",5,Fall 2024
+S027,Introduction to Python,"Good course for beginners. Takes time to explain fundamentals well.",4,Fall 2024
+S028,Web Development,"Could be better. Some modules are great, others feel rushed.",3,Fall 2024
+S029,Data Science Fundamentals,"Too many prerequisites assumed. Hard to follow without prior knowledge.",2,Fall 2024
+S030,Introduction to Python,"Perfect for absolute beginners! Patient instructor and clear examples.",5,Fall 2024
+S031,Web Development,"Fantastic projects! Really helped solidify my understanding of concepts.",5,Fall 2024
+S032,Data Science Fundamentals,"Average course. Nothing exceptional but covers the basics adequately.",3,Fall 2024
+S033,Introduction to Python,"Disappointed. Expected more depth and real-world applications.",2,Fall 2024
+S034,Web Development,"Best online course I've taken! Learned practical skills I use daily.",5,Fall 2024
+S035,Data Science Fundamentals,"Challenging but rewarding. Pushed me to learn more than I expected.",4,Fall 2024
+S036,Introduction to Python,"Very slow paced. Could have condensed content into half the time.",2,Fall 2024
+S037,Web Development,"Great content but terrible audio quality in videos. Very distracting.",3,Fall 2024
+S038,Data Science Fundamentals,"Inspiring course! Instructor's passion for the subject is contagious.",5,Fall 2024
+S039,Introduction to Python,"Solid course with good examples. Would recommend to friends.",4,Fall 2024
+S040,Web Development,"Not worth the money. Free resources online are better.",1,Fall 2024
+S041,Data Science Fundamentals,"Well-structured and thoughtfully designed. Really enjoyed it!",5,Fall 2024
+S042,Introduction to Python,"The pacing is good but needs more challenging exercises.",3,Fall 2024
+S043,Web Development,"Excellent course! Clear roadmap and achievable milestones.",5,Fall 2024
+S044,Data Science Fundamentals,"Too focused on theory. Need more hands-on practice.",2,Fall 2024
+S045,Introduction to Python,"Great introduction! Built my confidence to continue learning.",5,Fall 2024
+S046,Web Development,"Mediocre. Expected better based on reviews.",3,Fall 2024
+S047,Data Science Fundamentals,"Wonderful course! Instructor genuinely cares about student success.",5,Fall 2024
+S048,Introduction to Python,"Assignment deadlines are unrealistic given the course workload.",2,Fall 2024
+S049,Web Development,"Love it! Every module is well-planned and builds on previous ones.",5,Fall 2024
+S050,Data Science Fundamentals,"Good course but grading criteria is unclear and inconsistent.",3,Fall 2024

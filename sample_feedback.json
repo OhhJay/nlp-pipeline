@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "text": "This software is incredible! It has transformed our workflow completely.",
+    "author": "user123",
+    "timestamp": "2024-01-15T10:30:00"
+  },
+  {
+    "id": 2,
+    "text": "Buggy and crashes frequently. Very frustrating to use.",
+    "author": "user456",
+    "timestamp": "2024-01-16T14:22:00"
+  },
+  {
+    "id": 3,
+    "text": "Works as expected. No major issues so far.",
+    "author": "user789",
+    "timestamp": "2024-01-17T09:15:00"
+  },
+  {
+    "id": 4,
+    "text": "Best tool I've used in years! Highly recommend it!",
+    "author": "user321",
+    "timestamp": "2024-01-18T16:45:00"
+  },
+  {
+    "id": 5,
+    "text": "Terrible user interface. Hard to navigate.",
+    "author": "user654",
+    "timestamp": "2024-01-19T11:20:00"
+  }
+]
