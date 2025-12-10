@@ -87,6 +87,32 @@ jobs:
             docker push $IMAGE_NAME:latest
             docker push $IMAGE_NAME:$IMAGE_TAG
 
+
+  # ✅ NEW JOB: Verifies image was actually pushed to Docker Hub
+  verify-push:
+    executor: docker-publisher
+    steps:
+      - setup_remote_docker
+
+      - run:
+          name: Log in to Docker Hub
+          command: |
+            echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+
+      - run:
+          name: Verify Images Exist on Docker Hub
+          command: |
+            IMAGE_TAG=${CIRCLE_TAG#v}
+
+            echo "Attempting to pull $IMAGE_NAME:latest ..."
+            docker pull $IMAGE_NAME:latest
+
+            echo "Attempting to pull $IMAGE_NAME:$IMAGE_TAG ..."
+            docker pull $IMAGE_NAME:$IMAGE_TAG
+
+            echo "✔ Docker Hub push verification successful."
+
+
 workflows:
   version: 2
   test-and-build:
@@ -98,6 +124,15 @@ workflows:
       - publish-tag:
           requires:
             - build-docker
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v.*/
+      # Run verification AFTER image is pushed
+      - verify-push:
+          requires:
+            - publish-tag
           filters:
             branches:
               ignore: /.*/
