@@ -3,16 +3,6 @@ version: 2.1
 orbs:
   python: circleci/python@2.1.1
 
-jobs:
-  test:
-    docker:
-      - image: cimg/python:3.9
-    steps:
-      - checkoutversion: 2.1
-
-orbs:
-  python: circleci/python@2.1.1
-
 executors:
   docker-publisher:
     docker:
@@ -113,56 +103,3 @@ workflows:
               ignore: /.*/
             tags:
               only: /^v.*/
-
-      
-      - restore_cache:
-          keys:
-            - deps-{{ checksum "requirements.txt" }}
-            - deps-
-      
-      - run:
-          name: Install dependencies
-          command: |
-            python -m venv venv
-            . venv/bin/activate
-            pip install -r requirements.txt
-      
-      - save_cache:
-          paths:
-            - ./venv
-          key: deps-{{ checksum "requirements.txt" }}
-      
-      - run:
-          name: Download NLTK data
-          command: |
-            . venv/bin/activate
-            python -m nltk.downloader punkt
-      
-
-  build-docker:
-    docker:
-      - image: cimg/python:3.9
-    steps:
-      - checkout
-      - setup_remote_docker:
-          docker_layer_caching: true
-      
-      - run:
-          name: Build Docker image
-          command: |
-            docker build -t nlp-sentiment-analyzer:${CIRCLE_SHA1} .
-            docker tag nlp-sentiment-analyzer:${CIRCLE_SHA1} nlp-sentiment-analyzer:latest
-      
-      - run:
-          name: Test Docker image
-          command: |
-            docker run nlp-sentiment-analyzer:latest
-
-workflows:
-  version: 2
-  test-and-build:
-    jobs:
-      - test
-      - build-docker:
-          requires:
-            - test
