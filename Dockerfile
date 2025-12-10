@@ -23,7 +23,7 @@ RUN mkdir -p /app/data/input /app/data/output
 
 # Copy application code
 COPY src/ ./src/
-COPY data/ ./data/
+# COPY data/ ./data/
 COPY run_pipeline.py .
 
 # Set Python path
