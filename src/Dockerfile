@@ -1,0 +1,33 @@
+FROM python:3.9-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements first for better caching
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Download NLTK data
+RUN python -m nltk.downloader punkt
+
+# Create necessary directories
+RUN mkdir -p /app/data/input /app/data/output
+
+# Copy application code
+COPY src/ ./src/
+COPY data/ ./data/
+COPY run_pipeline.py .
+
+# Set Python path
+ENV PYTHONPATH=/app
+
+# Default command runs the pipeline script
+CMD ["python", "run_pipeline.py", "--help"]

@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  # PostgreSQL database for testing
+  postgres:
+    image: postgres:15-alpine
+    container_name: nlp-postgres
+    environment:
+      POSTGRES_USER: nlpuser
+      POSTGRES_PASSWORD: nlppass
+      POSTGRES_DB: nlpdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+    networks:
+      - nlp-network
+
+  # NLP Application
+  nlp-app:
+    build: .
+    container_name: nlp-sentiment-app
+    depends_on:
+      - postgres
+    environment:
+      - POSTGRES_CONNECTION=postgresql://nlpuser:nlppass@postgres:5432/nlpdb
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+    networks:
+      - nlp-network
+    command: tail -f /dev/null  # Keep container running
+
+volumes:
+  postgres_data:
+
+networks:
+  nlp-network:
+    driver: bridge
