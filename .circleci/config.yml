@@ -78,14 +78,14 @@ jobs:
       - run:
           name: Publish Docker Image to Docker Hub
           command: |
-            echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            echo "$dckr_pat_latsZh7WI19sq60a15D4MPh7WcU" | docker login -u "$ayanjuwon" --password-stdin
             
             IMAGE_TAG=${CIRCLE_TAG#v}
 
-            docker tag $IMAGE_NAME:latest $IMAGE_NAME:$IMAGE_TAG
+            docker tag nlp-learn:latest nlp-learn:latest
 
-            docker push $IMAGE_NAME:latest
-            docker push $IMAGE_NAME:$IMAGE_TAG
+            docker push nlp-learn:latest
+            docker push nlp-learn:latest
 
 
   # ✅ NEW JOB: Verifies image was actually pushed to Docker Hub
@@ -97,7 +97,7 @@ jobs:
       - run:
           name: Log in to Docker Hub
           command: |
-            echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            echo "dckr_pat_latsZh7WI19sq60a15D4MPh7WcU" | docker login -u "ayanjuwon" --password-stdin
 
       - run:
           name: Verify Images Exist on Docker Hub
@@ -105,10 +105,10 @@ jobs:
             IMAGE_TAG=${CIRCLE_TAG#v}
 
             echo "Attempting to pull $IMAGE_NAME:latest ..."
-            docker pull $IMAGE_NAME:latest
+            docker pull nlp-learn:latest
 
             echo "Attempting to pull $IMAGE_NAME:$IMAGE_TAG ..."
-            docker pull $IMAGE_NAME:$IMAGE_TAG
+            docker pull nlp-learn:latest
 
             echo "✔ Docker Hub push verification successful."
 
