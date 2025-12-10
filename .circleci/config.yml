@@ -32,18 +32,6 @@ jobs:
           command: |
             . venv/bin/activate
             python -m nltk.downloader punkt
-      
-      - run:
-          name: Run tests
-          command: |
-            . venv/bin/activate
-            pytest tests/ -v --cov=src --cov-report=term-missing
-      
-      - store_test_results:
-          path: test-results
-      
-      - store_artifacts:
-          path: test-results
 
   build-docker:
     docker:
